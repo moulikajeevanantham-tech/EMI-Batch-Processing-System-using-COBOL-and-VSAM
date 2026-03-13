@@ -1,0 +1,18 @@
+ //MOULI03 JOB (123),'COBOL COMPILE',CLASS=A,MSGCLASS=A,NOTIFY=&SYSUID  
+ //STEP1 EXEC PGM=IGYCRCTL                                              
+ //SYSPRINT DD SYSOUT=*                                                 
+ //SYSIN DD DSN=A016.MOULI.COBOL(EMIPROC),DISP=SHR                      
+ //SYSLIN DD DSN=&&OBJSET,DISP=(MOD,PASS),UNIT=SYSDA,                   
+ // SPACE=(TRK,(1,1))                                                   
+ //SYSUT1 DD UNIT=SYSDA,SPACE=(CYL,(1,1))                               
+ //SYSUT2 DD UNIT=SYSDA,SPACE=(CYL,(1,1))                               
+ //SYSUT3 DD UNIT=SYSDA,SPACE=(CYL,(1,1))                               
+ //SYSUT4 DD UNIT=SYSDA,SPACE=(CYL,(1,1))                               
+ //SYSUT5 DD UNIT=SYSDA,SPACE=(CYL,(1,1))                               
+ //SYSUT6 DD UNIT=SYSDA,SPACE=(CYL,(1,1))                               
+ //SYSUT7 DD UNIT=SYSDA,SPACE=(CYL,(1,1))                               
+ //STEP2 EXEC PGM=IEWL                                                  
+ //SYSLIN DD DSN=&&OBJSET,DISP=(OLD,DELETE)                             
+ //SYSLMOD DD DSN=A016.MOULI.LOADLIB(EMIPROC),DISP=SHR                  
+ //SYSLIB DD DSN=CEE.SCEELKED,DISP=SHR                                  
+ //SYSPRINT DD SYSOUT=*
