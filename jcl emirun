@@ -1,0 +1,7 @@
+ //MOULI04 JOB (123),'RUN EMI',CLASS=A,MSGCLASS=A,NOTIFY=&SYSUID       
+ //STEP1 EXEC PGM=EMIPROC                                              
+ //STEPLIB DD DSN=A016.MOULI.LOADLIB,DISP=SHR                          
+ //EMIIN DD DSN=A016.MOULI.EMI.INPUT,DISP=SHR                          
+ //KSDSACC DD DSN=A016.MOULI.KSDS,DISP=SHR                             
+ //SYSOUT DD SYSOUT=*                                                  
+ //SYSPRINT DD SYSOUT=*
