@@ -1,0 +1,23 @@
+ //MOULI01 JOB (123),'VSAM DEF',CLASS=A,MSGCLASS=A,NOTIFY=&SYSUID       
+ //STEP01  EXEC PGM=IDCAMS                                              
+ //SYSPRINT DD SYSOUT=*                                                 
+ //SYSIN    DD *                                                        
+   DELETE A016.MOULI.KSDS CLUSTER                                       
+   SET MAXCC = 0                                                        
+ /*                                                                     
+ //STEP02  EXEC PGM=IDCAMS                                              
+ //SYSPRINT DD SYSOUT=*                                                 
+ //SYSIN    DD *                                                        
+   DEFINE CLUSTER (NAME(A016.MOULI.KSDS) -                              
+          INDEXED -                                                     
+          KEYS(10 0) -                                                  
+          RECORDSIZE(80 80) -                                           
+          TRACKS(1 1) -                                                 
+          FREESPACE(3 3) -                                              
+          CISZ(4096) -                                                  
+          VOLUMES(USR001)) -                                            
+        DATA (NAME(A016.MOULI.KSDS.DATA)) -                             
+        INDEX (NAME(A016.MOULI.KSDS.INDEX))                             
+ /*                                                                     
+
+
